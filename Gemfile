@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+#ruby-gemset=railstutorial_rails_3_2_7
+
 gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
@@ -36,3 +39,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+group :doc do
+	gem 'sdoc', '0.3.20' , require: false
+end
+
+
+group :production do
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
+end
